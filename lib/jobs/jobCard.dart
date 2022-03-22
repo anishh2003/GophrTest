@@ -30,6 +30,8 @@ class JobCard extends StatelessWidget {
     int idx = deliveryDate.indexOf("T");
     date = deliveryDate.substring(0, idx).trim();
     date = date.replaceAll('-', '/');
+    var chars = date.split('/');
+    date= chars.reversed.join('/');
     return date;
   }
 
